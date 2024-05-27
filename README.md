@@ -1,6 +1,20 @@
-## Revents Udemy Course
+## Revents 2024 Udemy Course
 
-# re-vents-2024
 
-Added semantic UI React 3.0.0...
 
+**Project Purpose:**
+This project was built to practice my ReactJS, Redux and Firebase Skill. It is a website to create and join events with full CRUD funtionalities. The project use Redux for state management and Firebase firestore to store data at backend.
+
+## Skills Used
+ReactJS
+Vite
+Typescript
+React Router
+Semantic UI React
+React Hooks
+Redux
+Firebase Authentication
+Firebase Firestore
+Firebase Functions
+Here Maps
+Formik(to manage forms)

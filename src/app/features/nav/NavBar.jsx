@@ -1,25 +1,31 @@
-import React from 'react'
-import { Button, Container, Menu } from 'semantic-ui-react'
+import { Button, Container, Menu, MenuItem } from 'semantic-ui-react';
 
-const NavBar = ({ setFormOpen }) => {
-    return (
-        <Menu inverted fixed="top">
-            <Container>
-                <Menu.Item header>
-                    <img src="/assets/logo.png" alt="Logo" style={{marginRight: 15}} />
-                    Re-vents
-                </Menu.Item>
-                <Menu.Item name="Events" />
-                <Menu.Item>
-                    <Button positive inverted content="Create Event" onClick={() => setFormOpen(true)} />
-                </Menu.Item>
-                <Menu.Item position="right">
-                    <Button basic inverted content="Login" />
-                    <Button basic inverted content="Register" style={{marginLeft: '0.5em'}} />
-                </Menu.Item>
-            </Container>
-        </Menu>
-    )
+type Props = {
+    setFormOpen: (value: boolean) => void;
 }
 
-export default NavBar
+export default function NavBar({setFormOpen}: Props) {
+  return (
+    <Menu inverted={true} fixed='top'>
+        <Container>
+            <MenuItem header>
+                <img src="/logo.png" alt="logo" />
+                Re-vents
+            </MenuItem>
+            <MenuItem name='Events' />
+            <MenuItem>
+                <Button
+                    onClick={() => setFormOpen(true)}
+                    floated='right'
+                    positive={true}
+                    inverted={true}
+                    content='Create event' />
+            </MenuItem>
+            <MenuItem position='right'>
+                <Button basic inverted content='Login' />
+                <Button basic inverted content='Register' style={{marginLeft: '0.5em'}} />
+            </MenuItem>
+        </Container>
+    </Menu>
+  )
+}
