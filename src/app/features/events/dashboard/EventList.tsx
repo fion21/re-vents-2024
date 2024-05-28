@@ -1,23 +1,32 @@
+import InfiniteScroll from 'react-infinite-scroller';
 import { AppEvent } from '../../../app/types/event';
 import EventListItem from './EventListItem';
 
-type Props  = {
+type Props = {
   events: AppEvent[]
-  selectEvent: (event: AppEvent) => void
-  deleteEvent: (eventId: string) => void
+  loadMore: () => void
+  hasMore: boolean
+  loading: boolean
 }
 
-export default function EventList({events, selectEvent, deleteEvent}: Props) {
+export default function EventList({ events, hasMore, loadMore, loading }: Props) {
   return (
     <>
-      {events.map(event => (
-        <EventListItem
-          key={event.id}
-          event={event}
-          selectEvent={selectEvent}
-          deleteEvent={deleteEvent}
-        />
-      ))}
+      {events.length !== 0 && (
+        <InfiniteScroll
+          pageStart={0}
+          loadMore={loadMore}
+          hasMore={!loading && hasMore}
+          initialLoad={false}
+        >
+          {events.map(event => (
+            <EventListItem
+              key={event.id}
+              event={event}
+            />
+          ))}
+        </InfiniteScroll>
+      )}
     </>
   )
 }

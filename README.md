@@ -18,3 +18,10 @@ Firebase Firestore
 Firebase Functions
 Here Maps
 Formik(to manage forms)
+
+*** End of Section 5 ***
+- createBrowserRouter()
+- `<Outlet />`
+-  NavLink
+- Link
+- useLocation()
