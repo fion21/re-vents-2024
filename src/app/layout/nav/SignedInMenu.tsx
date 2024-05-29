@@ -15,7 +15,7 @@ export default function SignedInMenu({setAuth}: Props) {
 
     return (
         <Menu.Item position='right'>
-            <Image avatar spaced='right' src='/user.png' />
+            <Image avatar spaced='right' src='/assets/user.png' />
             <Dropdown pointing='top left' text='Bob'>
                 <Dropdown.Menu>
                     <Dropdown.Item as={Link} to='/createEvent' text='Create event' icon='plus' />

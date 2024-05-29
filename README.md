@@ -25,3 +25,10 @@ Formik(to manage forms)
 -  NavLink
 - Link
 - useLocation()
+
+*** End of Section 6 ***
+- redux
+- Scratch folder (test redux)
+-
+-
+-
